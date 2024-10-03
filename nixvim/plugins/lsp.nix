@@ -5,6 +5,7 @@
 
     servers = {
       pyright.enable = true;
+      hls.enable = true;
       bashls.enable = true;
       yamlls.enable = true;
       nil-ls.enable = true;

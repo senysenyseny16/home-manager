@@ -22,5 +22,6 @@
     web-devicons.enable = true;
 
     markdown-preview.enable = true;
+    fidget.enable = true;
   };
 }

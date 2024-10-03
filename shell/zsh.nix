@@ -6,9 +6,9 @@
   ];
   programs.zsh = {
     enable = true;
-    autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     sessionVariables.ZSH_DISABLE_COMPFIX = true;
+
     oh-my-zsh = {
       enable = true;
       plugins = [
