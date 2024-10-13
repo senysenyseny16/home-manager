@@ -3,6 +3,7 @@
 {
   home.packages = [
     pkgs.fzf
+    pkgs.any-nix-shell
   ];
   programs.zsh = {
     enable = true;
@@ -23,5 +24,9 @@
       ];
       theme = "agnoster";
     };
+
+    initExtra = ''
+      any-nix-shell zsh --info-right | source /dev/stdin
+    '';
   };
 }
