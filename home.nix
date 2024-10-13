@@ -11,7 +11,6 @@
   home.packages = [
     pkgs.tig
     pkgs.git-cliff
-    pkgs.uv
     pkgs.btop
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
