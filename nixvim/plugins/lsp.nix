@@ -5,10 +5,13 @@
 
     servers = {
       pyright.enable = true;
-      hls.enable = true;
+      hls = {
+        enable = true;
+        installGhc = false;
+      };
       bashls.enable = true;
       yamlls.enable = true;
-      nil-ls.enable = true;
+      nil_ls.enable = true;
     };
 
     keymaps.lspBuf = {
