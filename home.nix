@@ -19,8 +19,7 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-    (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    nerd-fonts.jetbrains-mono
     fastfetch
     tig
     gdu

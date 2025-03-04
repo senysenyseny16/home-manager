@@ -25,17 +25,18 @@
     }:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      username = "seny";
     in
     {
-      homeConfigurations."seny" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+      homeConfigurations."${username}" = home-manager.lib.homeManagerConfiguration {
+        pkgs = import nixpkgs { inherit system; };
 
         modules = [
           ./home.nix
           nixvim.homeManagerModules.nixvim
           catppuccin.homeManagerModules.catppuccin
         ];
+        extraSpecialArgs = { inherit username; };
       };
     };
 }
