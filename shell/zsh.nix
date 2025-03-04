@@ -22,7 +22,7 @@
         "docker"
         "z"
       ];
-      theme = "agnoster";
+      theme = "half-life";
     };
 
     initExtra = ''

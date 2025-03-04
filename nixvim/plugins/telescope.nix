@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   programs.nixvim.plugins.telescope = {
     enable = true;
@@ -9,4 +11,6 @@
       "<leader>fh" = "help_tags";
     };
   };
+
+  home.packages = [ pkgs.ripgrep ];
 }
