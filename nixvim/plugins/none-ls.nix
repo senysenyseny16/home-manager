@@ -5,18 +5,10 @@
 
     sources = {
       diagnostics = {
-        yamllint.enable = true;
         codespell.enable = true;
-        pylint = {
-          enable = true;
-          package = null;
-        };
       };
       formatting = {
-        yamlfmt.enable = true;
         shfmt.enable = true;
-        black.enable = true;
-        isort.enable = true;
         nixfmt = {
           enable = true;
           package = pkgs.nixfmt-rfc-style;

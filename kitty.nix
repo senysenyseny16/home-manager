@@ -5,7 +5,6 @@
       size = 13;
       name = "JetBrainsMono NF Medium";
     };
-    themeFile = "Catppuccin-Frappe";
     shellIntegration = {
       enableZshIntegration = true;
       mode = "no-cursor";

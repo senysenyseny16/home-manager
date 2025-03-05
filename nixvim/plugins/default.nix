@@ -23,5 +23,7 @@
 
     markdown-preview.enable = true;
     fidget.enable = true;
+
+    helm.enable = true;
   };
 }
