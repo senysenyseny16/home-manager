@@ -37,6 +37,13 @@
           softtabstop = 2;
         };
       };
+      "ftplugin/c.lua" = {
+        opts = {
+          shiftwidth = 2;
+          tabstop = 2;
+          softtabstop = 2;
+        };
+      };
     };
   };
 }
