@@ -34,7 +34,7 @@
         modules = [
           ./home.nix
           nixvim.homeManagerModules.nixvim
-          catppuccin.homeManagerModules.catppuccin
+          catppuccin.homeModules.catppuccin
         ];
         extraSpecialArgs = { inherit username; };
       };
