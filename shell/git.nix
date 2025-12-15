@@ -4,7 +4,11 @@
     lfs.enable = true;
     delta.enable = true;
 
-    userName = "Arseny";
-    userEmail = "arseny@protonmail.com";
+    settings.user.name = "Arseny";
+    settings.user.email = "arseny@protonmail.com";
+
+    settings.core.askpass = "";
+    settings.push.autoSetupRemote = true;
+    settings.credential.helper = "store";
   };
 }

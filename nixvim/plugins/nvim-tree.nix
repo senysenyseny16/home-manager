@@ -1,7 +1,7 @@
 {
   programs.nixvim = {
     plugins.nvim-tree.enable = true;
-    plugins.nvim-tree.view.width = 60;
+    plugins.nvim-tree.settings.view.width = 60;
 
     keymaps = [
       {

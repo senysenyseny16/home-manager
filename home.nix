@@ -24,6 +24,7 @@
     tig
     gdu
     duf
+    psmisc
   ];
 
   home.sessionVariables = {
@@ -32,6 +33,9 @@
 
   catppuccin.flavor = "frappe";
   catppuccin.enable = true;
+
+  programs.delta.enable = true;
+  programs.delta.enableGitIntegration = true;
 
   programs.home-manager.enable = true;
 }
