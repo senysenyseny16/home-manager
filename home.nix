@@ -1,8 +1,4 @@
-{
-  pkgs,
-  username,
-  ...
-}:
+{ pkgs, username, ... }:
 
 {
   imports = [
@@ -14,7 +10,7 @@
   home.username = username;
   home.homeDirectory = "/home/${username}";
 
-  home.stateVersion = "25.05";
+  home.stateVersion = "24.11";
 
   nixpkgs.config.allowUnfree = true;
 
@@ -31,11 +27,11 @@
     EDITOR = "nvim";
   };
 
-  catppuccin.flavor = "frappe";
-  catppuccin.enable = true;
-
+  programs.home-manager.enable = true;
+  programs.direnv.enable = true;
   programs.delta.enable = true;
   programs.delta.enableGitIntegration = true;
 
-  programs.home-manager.enable = true;
+  catppuccin.flavor = "frappe";
+  catppuccin.enable = true;
 }
