@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   programs.nixvim.plugins.lspkind.enable = true;
   programs.nixvim.plugins.lsp = {
@@ -8,7 +9,12 @@
       ruff.enable = true;
       hls = {
         enable = true;
-        installGhc = false;
+        installGhc = true;
+      };
+      rust_analyzer = {
+        enable = true;
+        installCargo = true;
+        installRustc = true;
       };
       bashls.enable = true;
       nil_ls.enable = true;
@@ -20,22 +26,23 @@
       gd = "definition";
       gi = "implementation";
     };
-  };
 
-  programs.nixvim.userCommands = {
-    Ruff = {
-      desc = "ruff";
-      command.__raw = ''
-        function()
-          vim.lsp.buf.code_action {
-            context = {                                                     
-              only = { 'source.fixAll.ruff' }   
-            },  
-            apply = true,
-          }
-          vim.lsp.buf.format { async = true }
-        end
-      '';
-    };
+    keymaps.extra = [
+      {
+        key = "<leader>fa";
+        action.__raw = ''
+          function()
+            vim.lsp.buf.format { async = false }
+            vim.lsp.buf.code_action {
+              context = { only = { 'source.fixAll.ruff' } },
+              apply = true,
+            }
+          end
+        '';
+      }
+    ];
   };
+  home.packages = with pkgs; [
+    rustfmt
+  ];
 }

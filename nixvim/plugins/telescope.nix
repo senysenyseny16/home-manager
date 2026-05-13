@@ -12,5 +12,8 @@
     };
   };
 
-  home.packages = [ pkgs.ripgrep ];
+  home.packages = [
+    pkgs.ripgrep
+    pkgs.fd
+  ];
 }

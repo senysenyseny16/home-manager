@@ -16,12 +16,4 @@
       };
     };
   };
-
-  programs.nixvim.keymaps = [
-    {
-      mode = "n";
-      key = "<leader>fa";
-      action = "<cmd>lua vim.lsp.buf.format({async = true})<CR>";
-    }
-  ];
 }

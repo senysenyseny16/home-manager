@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   programs.nixvim.plugins.treesitter = {
     enable = true;
@@ -9,4 +10,8 @@
       incremental_selection.enable = true;
     };
   };
+
+  home.packages = with pkgs; [
+    gcc # for template compilation
+  ];
 }
